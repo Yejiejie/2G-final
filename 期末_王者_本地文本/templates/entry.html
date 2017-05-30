@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_entry_title }}</h2>
+
+<form method='POST' action='/search4'>
+<table>
+<th colspan="2">使用此窗体提交搜索请求：</th>
+<tr><td>搜索：</td><td><input name='input_hero_name' type='TEXT' value='{{ the_output_prompt }}{{ the_output_prompt_error }}'></td></tr>
+</table>
+<p>准备就绪后, 单击此按钮：</p>
+<p><input value='开始' type='SUBMIT'></p>
+</form>
+
+{% endblock %}
